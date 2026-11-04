@@ -1,0 +1,208 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.contactSection {
+  padding: $spacing-24 0 $spacing-20;
+  position: relative;
+  z-index: $z-content;
+  border-top: 1px solid $color-border;
+  background: linear-gradient(180deg, rgba(9, 10, 12, 0.4) 0%, rgba(15, 18, 23, 0.95) 100%);
+}
+
+.container {
+  @include container;
+}
+
+.headerBlock {
+  margin-bottom: $spacing-16;
+
+  .badge {
+    @include meta-tag;
+    color: $color-accent;
+    background: $color-accent-subtle;
+    border: 1px solid $color-border-accent;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+    margin-bottom: 1.25rem;
+  }
+
+  .mainTitle {
+    font-size: clamp(2.4rem, 5.5vw, 4.25rem);
+    font-weight: 500;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+    color: $color-text-primary;
+    margin-bottom: 1.25rem;
+
+    .accentText {
+      background: linear-gradient(135deg, #ffffff 40%, $color-accent 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .subtitle {
+    font-size: $text-lg;
+    color: $color-text-secondary;
+    max-width: 650px;
+    line-height: 1.6;
+  }
+}
+
+.hideMobile {
+  display: none;
+  @include respond-to('md') {
+    display: inline;
+  }
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+
+  @include respond-to('md') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.contactCard {
+  @include glass-panel;
+  padding: 2.25rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+
+  .cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+
+    .iconWrapper {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid $color-border-accent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-accent;
+    }
+
+    .cardLabel {
+      @include meta-tag;
+      color: $color-text-muted;
+    }
+  }
+
+  .contactValue {
+    font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+    font-weight: 500;
+    color: $color-text-primary;
+    letter-spacing: -0.015em;
+    margin-bottom: 2rem;
+    word-break: break-word;
+    transition: color $duration-fast ease;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  .cardActions {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    margin-top: auto;
+  }
+}
+
+.actionBtnPrimary {
+  @include button-editorial;
+  @extend .primary;
+  padding: 0.65rem 1.25rem;
+  font-size: $text-xs;
+}
+
+.actionBtnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.15rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid $color-border;
+  color: $color-text-primary;
+  font-family: $font-mono;
+  font-size: $text-xs;
+  cursor: pointer;
+  transition: all $duration-fast ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: $color-border-hover;
+  }
+
+  .checkGreen {
+    color: $color-accent-emerald;
+  }
+}
+
+.profilesStrip {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid $color-border;
+  border-radius: 12px;
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  @include respond-to('lg') {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .stripLabel {
+    @include meta-tag;
+    color: $color-text-secondary;
+  }
+}
+
+.linksRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.profileLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: $text-sm;
+  color: $color-text-secondary;
+  transition: all $duration-fast ease;
+
+  .arrow {
+    opacity: 0.4;
+    transition: transform $duration-fast ease;
+  }
+
+  &:hover {
+    color: $color-text-primary;
+
+    .arrow {
+      transform: translate(2px, -2px);
+      opacity: 1;
+      color: $color-accent;
+    }
+  }
+
+  &.cvLink {
+    color: $color-accent;
+    font-weight: 500;
+  }
+}

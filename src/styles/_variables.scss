@@ -1,0 +1,83 @@
+// Color Palette - Editorial Dark Luxury Tech
+$color-bg: #090a0c;
+$color-bg-secondary: #0f1115;
+$color-bg-tertiary: #14171d;
+$color-bg-card: rgba(18, 21, 27, 0.7);
+$color-bg-card-hover: rgba(24, 28, 36, 0.85);
+
+$color-text-primary: #f2f2ef;
+$color-text-secondary: #b0b4bc;
+$color-text-muted: #6f7480;
+$color-text-stone: #d4cebd;
+
+// Computational Accents
+$color-accent: #38bdf8;          // Ice/Cyan AI pulse
+$color-accent-subtle: rgba(56, 189, 248, 0.15);
+$color-accent-glow: rgba(56, 189, 248, 0.3);
+$color-accent-emerald: #10b981;  // Status Beacon / Metric verification
+$color-accent-emerald-subtle: rgba(16, 185, 129, 0.15);
+
+// Borders & Dividers
+$color-border: rgba(255, 255, 255, 0.08);
+$color-border-hover: rgba(255, 255, 255, 0.18);
+$color-border-accent: rgba(56, 189, 248, 0.35);
+
+// Typography Fonts
+$font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+$font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Roboto Mono', Menlo, Consolas, monospace;
+
+// Typography Sizes
+$text-xs: 0.75rem;    // 12px
+$text-sm: 0.875rem;   // 14px
+$text-base: 1rem;     // 16px
+$text-lg: 1.125rem;   // 18px
+$text-xl: 1.25rem;    // 20px
+$text-2xl: 1.5rem;    // 24px
+$text-3xl: 1.875rem;  // 30px
+$text-4xl: 2.25rem;   // 36px
+$text-5xl: 3rem;      // 48px
+$text-6xl: 3.75rem;   // 60px
+$text-7xl: 4.5rem;    // 72px
+$text-8xl: 6rem;      // 96px
+
+// Spacing
+$spacing-1: 0.25rem;
+$spacing-2: 0.5rem;
+$spacing-3: 0.75rem;
+$spacing-4: 1rem;
+$spacing-6: 1.5rem;
+$spacing-8: 2rem;
+$spacing-12: 3rem;
+$spacing-16: 4rem;
+$spacing-20: 5rem;
+$spacing-24: 6rem;
+$spacing-32: 8rem;
+
+// Layout
+$container-max-width: 1400px;
+$container-padding-mobile: 1.25rem;
+$container-padding-desktop: 3rem;
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
+
+// Transitions & Easing
+$ease-editorial: cubic-bezier(0.16, 1, 0.3, 1); // silky smooth Apple/Awwwards ease
+$ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+$duration-fast: 0.2s;
+$duration-normal: 0.35s;
+$duration-slow: 0.6s;
+$duration-reveal: 0.9s;
+
+// Z-Index
+$z-canvas: 1;
+$z-content: 10;
+$z-header: 100;
+$z-modal: 500;
+$z-cursor: 999;
+$z-loader: 1000;

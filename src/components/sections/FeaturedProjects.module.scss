@@ -1,0 +1,338 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.projectsSection {
+  padding: $spacing-24 0;
+  position: relative;
+  z-index: $z-content;
+  border-top: 1px solid $color-border;
+  background: $color-bg;
+}
+
+.container {
+  @include container;
+}
+
+.sectionHeader {
+  margin-bottom: $spacing-16;
+
+  .headerTop {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .badge {
+    @include meta-tag;
+    color: $color-accent;
+    background: $color-accent-subtle;
+    border: 1px solid $color-border-accent;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+  }
+
+  .filterGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .filterBtn {
+    font-family: $font-mono;
+    font-size: $text-xs;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid $color-border;
+    color: $color-text-secondary;
+    transition: all $duration-fast ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: $color-text-primary;
+    }
+
+    &.activeFilter {
+      background: $color-text-primary;
+      color: $color-bg;
+      border-color: $color-text-primary;
+      font-weight: 500;
+    }
+  }
+
+  .title {
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+    font-weight: 500;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: $color-text-primary;
+    margin-bottom: 1.25rem;
+
+    .accentText {
+      color: $color-accent;
+    }
+  }
+
+  .subtitle {
+    font-size: $text-lg;
+    color: $color-text-secondary;
+    max-width: 650px;
+    line-height: 1.6;
+  }
+}
+
+.projectList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.projectCard {
+  @include glass-panel;
+  overflow: hidden;
+  transition: border-color $duration-normal ease, transform $duration-normal ease;
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.16);
+  }
+}
+
+.cardMain {
+  padding: 2.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+
+  @include respond-to('lg') {
+    grid-template-columns: 240px 1fr 180px;
+    gap: 2.5rem;
+  }
+}
+
+.cardMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .projectCategoryTag {
+    @include meta-tag;
+    color: $color-accent;
+    margin-bottom: 0.25rem;
+
+    svg {
+      color: $color-accent;
+    }
+  }
+
+  .orgTimeline {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: $text-sm;
+    color: $color-text-primary;
+    font-weight: 500;
+
+    .dotSeparator {
+      color: $color-text-muted;
+    }
+
+    .timelineText {
+      color: $color-text-muted;
+      font-size: $text-xs;
+      font-family: $font-mono;
+    }
+  }
+
+  .projectRole {
+    font-family: $font-mono;
+    font-size: 0.6875rem;
+    color: $color-text-stone;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+
+  .projectTitle {
+    font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: $color-text-primary;
+    margin-bottom: 0.35rem;
+  }
+
+  .projectSubtitle {
+    font-size: $text-sm;
+    color: $color-accent;
+    font-family: $font-mono;
+    margin-bottom: 0.875rem;
+  }
+
+  .projectDescription {
+    font-size: $text-sm;
+    line-height: 1.6;
+    color: $color-text-secondary;
+    margin-bottom: 1.5rem;
+    max-width: 720px;
+  }
+}
+
+.metricsStrip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 1.25rem;
+
+  .metricItem {
+    display: flex;
+    flex-direction: column;
+
+    .metricVal {
+      font-size: $text-lg;
+      font-weight: 600;
+      color: #ffffff;
+      font-family: $font-mono;
+      line-height: 1.1;
+    }
+
+    .metricLbl {
+      font-size: 0.6875rem;
+      color: $color-text-muted;
+      margin-top: 0.2rem;
+    }
+  }
+}
+
+.techPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  .techPill {
+    font-family: $font-mono;
+    font-size: 0.6875rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid $color-border;
+    padding: 0.25rem 0.55rem;
+    border-radius: 4px;
+    color: $color-text-secondary;
+  }
+
+  .techPillMore {
+    font-family: $font-mono;
+    font-size: 0.6875rem;
+    background: rgba(56, 189, 248, 0.08);
+    color: $color-accent;
+    padding: 0.25rem 0.55rem;
+    border-radius: 4px;
+  }
+}
+
+.cardActions {
+  display: flex;
+  justify-content: flex-start;
+
+  @include respond-to('lg') {
+    justify-content: flex-end;
+  }
+}
+
+.expandButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid $color-border;
+  border-radius: 9999px;
+  color: $color-text-primary;
+  font-family: $font-mono;
+  font-size: $text-xs;
+  transition: all $duration-fast ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: $color-border-hover;
+    transform: translateY(-1px);
+  }
+}
+
+.expandedDrawer {
+  background: rgba(0, 0, 0, 0.4);
+  border-top: 1px solid $color-border;
+  padding: 2.25rem;
+  animation: fadeIn 0.35s $ease-editorial;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.drawerGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+
+  @include respond-to('md') {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.drawerBlock {
+  .drawerLabel {
+    @include meta-tag;
+    color: $color-accent;
+    margin-bottom: 0.625rem;
+  }
+
+  .drawerText {
+    font-size: $text-sm;
+    color: $color-text-secondary;
+    line-height: 1.6;
+  }
+
+  &.fullWidth {
+    @include respond-to('md') {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.architectureList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+
+  @include respond-to('md') {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+    font-size: $text-sm;
+    color: $color-text-secondary;
+    line-height: 1.5;
+
+    .checkIcon {
+      color: $color-accent-emerald;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+  }
+}

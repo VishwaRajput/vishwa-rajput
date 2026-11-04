@@ -1,0 +1,48 @@
+@use '../../styles/variables' as *;
+
+.cursorDot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  margin-left: -3px;
+  background-color: $color-accent;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: $z-cursor;
+  transition: transform 0.05s linear, opacity 0.2s ease, width 0.2s ease, height 0.2s ease;
+
+  &.hovering {
+    opacity: 0;
+  }
+}
+
+.cursorRing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+  margin-left: -16px;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: $z-cursor;
+  transition: width 0.25s $ease-editorial, 
+              height 0.25s $ease-editorial, 
+              margin 0.25s $ease-editorial,
+              background-color 0.25s $ease-editorial,
+              border-color 0.25s $ease-editorial;
+
+  &.hoveringRing {
+    width: 48px;
+    height: 48px;
+    margin-top: -24px;
+    margin-left: -24px;
+    border-color: rgba(56, 189, 248, 0.8);
+    background-color: rgba(56, 189, 248, 0.08);
+  }
+}

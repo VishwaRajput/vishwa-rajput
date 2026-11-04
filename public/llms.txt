@@ -1,0 +1,47 @@
+# Vishwa Rajput — Professional Profile & AI/Data Engineering Overview
+
+> Portfolio & Research: https://vishwarajput.com
+> Identity: AI Engineer & Data Engineer
+> Location: Würzburg, Germany | Remote
+> Contact: vishwarajput001@gmail.com | DE: +49 177 6922843 | IN: +91 9687807060
+> Profiles:
+> - LinkedIn: https://www.linkedin.com/in/vishwa-rajput/
+> - GitHub: https://github.com/VishwaRajput
+
+## Professional Summary
+Vishwa Rajput is an AI Engineer and Data Engineer with 4+ years of cross-disciplinary experience across software engineering, enterprise data pipelines, and applied Artificial Intelligence / Generative AI systems. He holds a Master of Science in Computer Science (Artificial Intelligence) from the Technical University of Applied Sciences Würzburg-Schweinfurt (THWS) and a Bachelor of Engineering in Computer Engineering from Gujarat Technological University.
+
+## Core Specializations
+- **Generative AI & Hybrid Retrieval**: Multi-source Hybrid RAG combining Neo4j Knowledge Graphs with ChromaDB Dense Vector Search, Vision-Language Models (Qwen 2.5 VL), LangChain, HuggingFace, and RAGAS evaluation framework.
+- **Enterprise Data Engineering**: Production-scale data pipeline engineering with Python, PySpark, Databricks, Apache Airflow DAG orchestration, Delta Lake, and AWS/GCP cloud architectures.
+- **Software Architecture**: Enterprise backend systems, C#, .NET Core MVC, REST APIs, SQL database optimization (MSSQL, MySQL, Oracle, Dapper), and Git CI/CD.
+
+## Verified Experience
+1. **Working Student Data Engineer — Decathlon Germany** (May 2025 – Feb 2026)
+   - Engineered scalable data pipelines in Python, PySpark, Databricks, and AWS.
+   - Built automated data quality control and monitoring workflows.
+   - Reduced deployment cycles from weeks to days with Git CI/CD.
+   - Industrialized machine learning use cases into cloud workflows.
+
+2. **Intern Application Manager — Decathlon Germany** (Oct 2023 – Apr 2025)
+   - Developed automated marketplace solutions using Python, REST APIs, and PySpark.
+   - Built BI dashboards from large-scale European retail datasets.
+   - Provided Tier-3 technical system operations and troubleshooting.
+
+3. **Software Engineer — Tatvasoft, India** (Nov 2020 – Feb 2023)
+   - Developed full-stack enterprise applications and backend APIs using C# and .NET.
+   - Designed and tuned relational schemas in MSSQL, MySQL, and Oracle.
+
+## Master Thesis Research
+- **Title**: Multi-source Retrieval Using Graph and Vector Hybrid Models in Regulatory Contexts
+- **Institution**: THWS Würzburg-Schweinfurt (Mar 2023 – Mar 2026)
+- **Tech Stack**: Python, LangChain, Neo4j, Chroma, Qwen 2.5 VL, HuggingFace, Sentence Transformers, RAGAS, Ollama
+- **Key Results**: Context recall of 84% (Vector RAG), 83% (Graph RAG), and 85% (Hybrid RAG). Resolved hallucination and provenance tracking in dense regulatory documents.
+
+## Selected Production Projects
+1. **Auto Rejector (Decathlon)**: Automated marketplace quality gate processing 10,000+ products/day in Delta Lake; integrated with Mirakl APIs, delivering 93% reduction in invalid product publications.
+2. **Language Check (Decathlon)**: Automated attribute language detection using Facebook fastText and country validation, scheduled with daily Airflow DAGs on AWS.
+3. **Message Classification (Decathlon)**: Multilingual customer query classification and department routing pipeline, reducing unclassified messages from 78% to 65%.
+4. **Smart Darts**: Computer vision dart tip detection and automatic score calculation using OpenCV.
+5. **Amazon Review Sentiment Analysis**: Deep learning NLP sentiment model with 95% accuracy.
+6. **House Price Prediction**: XGBoost regression pipeline with 89% accuracy.

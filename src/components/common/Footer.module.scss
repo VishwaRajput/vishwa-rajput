@@ -1,0 +1,151 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.footer {
+  position: relative;
+  z-index: $z-content;
+  border-top: 1px solid $color-border;
+  background: #060708;
+  padding: 4.5rem 0 3rem;
+}
+
+.container {
+  @include container;
+}
+
+.footerTop {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+  @include respond-to('md') {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.identityBlock {
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+
+  .name {
+    font-size: $text-xl;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: $color-text-primary;
+  }
+
+  .role {
+    font-family: $font-mono;
+    font-size: $text-xs;
+    color: $color-accent;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .ethos {
+    font-size: $text-sm;
+    color: $color-text-secondary;
+    line-height: 1.6;
+  }
+}
+
+.metaBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+
+  @include respond-to('md') {
+    align-items: flex-end;
+  }
+}
+
+.timeTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: $font-mono;
+  font-size: $text-xs;
+  color: $color-text-muted;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid $color-border;
+  padding: 0.4rem 0.75rem;
+  border-radius: 9999px;
+
+  svg {
+    color: $color-accent;
+  }
+}
+
+.backToTopBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: $font-mono;
+  font-size: $text-xs;
+  color: $color-text-secondary;
+  background: none;
+  border: none;
+  padding: 0.4rem 0;
+  cursor: pointer;
+  transition: color $duration-fast ease;
+
+  &:hover {
+    color: $color-text-primary;
+  }
+}
+
+.footerBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 2rem;
+
+  @include respond-to('md') {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.copyright {
+  font-size: $text-xs;
+  color: $color-text-muted;
+  line-height: 1.5;
+}
+
+.footerLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: $font-mono;
+  font-size: $text-xs;
+  color: $color-text-muted;
+
+  a {
+    color: $color-text-muted;
+    transition: color $duration-fast ease;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  .llmsLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: $color-accent;
+  }
+
+  .dot {
+    opacity: 0.3;
+  }
+}

@@ -1,0 +1,64 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  background-color: $color-bg;
+  z-index: $z-loader;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s $ease-editorial, visibility 0.5s ease;
+
+  &.fading {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.preloaderContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nameTypo {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: $color-text-primary;
+}
+
+.roleLabel {
+  font-family: $font-mono;
+  font-size: $text-xs;
+  color: $color-accent;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.loadingBarWrapper {
+  width: 140px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.loadingBarFill {
+  width: 100%;
+  height: 100%;
+  background: $color-accent;
+  animation: loadingAnim 0.8s ease-in-out infinite;
+  transform-origin: left;
+}
+
+@keyframes loadingAnim {
+  0% { transform: scaleX(0); }
+  50% { transform: scaleX(0.7); }
+  100% { transform: scaleX(1); }
+}

@@ -1,0 +1,740 @@
+# MASTER PROMPT: BUILD MY PERSONAL PORTFOLIO WEBSITE
+
+## 1. YOUR ROLE
+
+Act as a world-class creative developer, senior Next.js engineer, UI/UX designer, motion designer, WebGL engineer, technical SEO specialist, and web performance architect.
+
+Your task is to design and build a complete, production-ready personal portfolio website for **Vishwa Rajput**, an AI Engineer and Data Engineer.
+
+This must not look like a generic developer portfolio or a standard collection of cards and sections. It should feel like an immersive, editorial, cinematic digital experience that tells my professional story through typography, visual composition, carefully choreographed motion, and meaningful interactions.
+
+The website should communicate that I am intelligent, technically capable, curious, thoughtful, creative, ambitious, and capable of solving complex engineering problems.
+
+The final result must balance three things:
+
+1. A distinctive visual identity and memorable storytelling.
+2. Excellent technical implementation and engineering credibility.
+3. Outstanding performance, accessibility, responsiveness, SEO, and AI/LLM discoverability.
+
+Do not merely provide a design proposal, static mockup, or implementation plan. Inspect the available project files and build the actual website.
+
+---
+
+## 2. FIRST: INSPECT ALL PROVIDED MATERIALS
+
+Before writing code, thoroughly inspect the project workspace and identify all available reference materials, including:
+
+- My complete personal information document.
+- My finalized portfolio theme prompt.
+- My finalized narrative or storytelling prompt.
+- My photographs and other supplied images.
+- Any existing project structure, source code, assets, fonts, or configuration files.
+
+These materials are the source of truth for the website.
+
+### Mandatory instructions
+
+- Read the documents completely before making design decisions.
+- Extract my professional background, personal story, skills, projects, achievements, aspirations, values, and other relevant information.
+- Follow the finalized theme prompt closely.
+- Follow the narrative and storytelling prompt closely.
+- Preserve the accuracy of my actual experience and achievements.
+- Never fabricate projects, employers, credentials, metrics, testimonials, awards, or personal details.
+- Do not replace my existing content with generic placeholder copy.
+- If information is missing, omit it or clearly identify the gap instead of inventing facts.
+- Reuse my supplied photographs thoughtfully throughout the experience.
+- Inspect the existing project before modifying it. Preserve useful existing functionality and avoid unnecessary rewrites.
+- If a required document cannot be located or accessed, report exactly what is missing instead of pretending to have read it.
+
+The supplied theme and content prompts take precedence over any conflicting visual assumptions in this master prompt.
+
+---
+
+## 3. TECHNOLOGY STACK
+
+Use the following technology stack, selecting compatible, stable versions and avoiding unnecessary dependencies.
+
+### Core application
+
+- Next.js with the App Router.
+- React and TypeScript.
+- SCSS and SCSS Modules for styling.
+- A well-structured component architecture.
+- Server Components by default, with Client Components only where interactivity requires them.
+- Semantic HTML5.
+- Modern CSS features where they improve simplicity or performance.
+
+Do not replace SCSS with Tailwind CSS or another styling system.
+
+### Animation architecture
+
+Use a carefully coordinated combination of:
+
+**GSAP and GSAP ScrollTrigger**
+- Main animation orchestration system.
+- Scroll-driven storytelling.
+- Pinned sections where appropriate.
+- Complex timelines, staggered reveals, text choreography, and section transitions.
+- Coordinated entrance and exit animations.
+- Shared timeline conventions and reusable animation utilities.
+
+**Framer Motion / Motion for React**
+- Component-level interactions.
+- Page transitions where appropriate.
+- React-native animation patterns.
+- Hover states, interactive elements, layout transitions, and smaller UI animations.
+
+Check current package compatibility and use the maintained package/API appropriate to the project.
+
+**Three.js with React Three Fiber and Drei, when beneficial**
+- Subtle, high-quality 3D visuals.
+- Abstract technical environments, spatial elements, or restrained WebGL effects.
+- Interactive visual details that reinforce the AI and data engineering identity.
+
+Use WebGL only where it adds meaningful value. It must never be required to understand my content or navigate the website.
+
+**Anime.js**
+- Use selectively for specialized text or decorative animations when it provides a clear benefit.
+- Avoid duplicating animations already handled effectively by GSAP or Motion.
+
+**GLSL shaders**
+- Use for a small number of carefully optimized visual effects, such as subtle atmospheric backgrounds, procedural gradients, or abstract data-inspired visuals.
+- Keep shader complexity and GPU usage under control.
+- Provide static CSS fallbacks for unsupported or constrained devices.
+
+**Text animation**
+- Choose an appropriate text animation library, such as SplitType with GSAP, or another compatible lightweight solution.
+- Animate text by line, word, or character only when it improves readability and visual storytelling.
+- Avoid excessive character-by-character animation throughout the entire website.
+- Preserve accessible text for screen readers and search engines.
+
+### Smooth scrolling
+
+Use **Lenis** as the preferred smooth-scrolling solution.
+
+- Integrate it with GSAP ScrollTrigger through the recommended synchronization mechanism.
+- Use one shared scroll system.
+- Ensure scroll progress, pinning, section reveals, and navigation remain synchronized.
+- Avoid conflicts between native scroll behavior, Lenis, and ScrollTrigger.
+- Preserve normal anchor navigation, keyboard accessibility, browser history, and reduced-motion behavior.
+
+Do not combine Lenis with Locomotive Scroll. If an existing project already relies on Locomotive Scroll, evaluate whether it should be retained or migrated rather than running both simultaneously.
+
+### Animation performance
+
+Use GSAP as the primary orchestrator for complex, coordinated sequences and Motion for independent React interactions.
+
+Create a consistent animation architecture with:
+
+- Reusable animation presets.
+- Shared easing conventions.
+- Consistent durations and stagger intervals.
+- Centralized scroll-trigger configuration.
+- Proper cleanup of timelines, observers, and event listeners.
+- Correct React lifecycle handling.
+- Responsive animation variants.
+- Reduced-motion alternatives.
+- Clear ownership of animated properties.
+
+Never let two animation libraries simultaneously control the same property on the same element unless the interaction is explicitly coordinated.
+
+Do not install every library merely because it is listed here. If a dependency is unnecessary, incompatible, or too expensive for the benefit it provides, explain the decision and choose the lighter solution.
+
+---
+
+## 4. CREATIVE DIRECTION AND VISUAL IDENTITY
+
+Use my supplied theme prompt as the primary visual specification.
+
+The portfolio should feel like a premium, thoughtfully art-directed digital publication rather than a conventional technology landing page.
+
+Aim for a visual experience that communicates intelligence, precision, depth, curiosity, and technical sophistication.
+
+### Design principles
+
+- Strong typography and deliberate typographic hierarchy.
+- Intentional whitespace and editorial composition.
+- Distinctive layouts rather than repetitive card grids.
+- Carefully balanced contrast and visual rhythm.
+- Restrained use of gradients, textures, borders, and atmospheric effects.
+- Refined transitions between content sections.
+- Purposeful asymmetry where supported by the finalized theme.
+- Subtle visual references to AI systems, data pipelines, networks, intelligence, and computational structures.
+- A cohesive design language across desktop, tablet, and mobile.
+
+Use the exact color palette, typography direction, and visual language defined in my supplied theme prompt.
+
+Use the fonts specified in the theme. If they are unavailable, select suitable alternatives and load them efficiently, preferably with optimized local font assets or appropriately configured font loading.
+
+Do not invent a new visual theme before inspecting the provided references.
+
+### Branding restriction
+
+**Do not create or add any logo, monogram, brand symbol, or decorative personal mark.**
+
+Do not design a logo from my initials or turn my name into a graphic logo.
+
+My name may appear as ordinary text where needed for the page title, introduction, metadata, and content. It must remain typographic content, not a logo.
+
+Avoid adding an unnecessary logo-like icon to the navigation or footer.
+
+---
+
+## 5. USE MY PHOTOGRAPHS INTELLIGENTLY
+
+My supplied photographs are an important part of the website's visual identity.
+
+Inspect all provided photos and determine which are most appropriate for:
+
+- The main introductory or hero section.
+- An editorial portrait or profile section.
+- Storytelling transitions.
+- Relevant supporting sections, if appropriate.
+
+### Photo treatment
+
+- Choose images that make me look confident, intelligent, approachable, professional, and natural.
+- Use deliberate crops, aspect ratios, positioning, and responsive image treatments.
+- Make the photography feel integrated into the overall art direction.
+- Use subtle image reveals, clipping masks, controlled parallax, or restrained hover interactions where appropriate.
+- Maintain sufficient contrast between images and overlaid text.
+- Use responsive image sizing and appropriate focal points.
+- Preserve the authenticity of my appearance.
+
+Do not artificially change my facial features, skin tone, identity, or body proportions.
+
+Do not invent professional photographs that imply I participated in events or environments that are not represented by the supplied materials.
+
+Do not use random stock portraits as substitutes for my actual photographs.
+
+Use Next.js Image for local photographs, with suitable dimensions, responsive sizing, and optimized delivery.
+
+Do not animate large images in ways that cause layout shifts.
+
+---
+
+## 6. STORYTELLING AND INFORMATION ARCHITECTURE
+
+Build the website around the actual narrative contained in my documents.
+
+Do not force my story into a generic template. Design the section sequence to support the narrative and theme I have already finalized.
+
+Possible structural elements include:
+
+- An atmospheric opening.
+- A distinctive introductory statement.
+- A compelling introduction to my professional identity.
+- A transition into my personal or professional story.
+- My evolution toward AI engineering and data engineering.
+- Selected projects and engineering work.
+- My technical capabilities and problem-solving approach.
+- Relevant experience, achievements, and education.
+- My aspirations, interests, or future direction.
+- A thoughtful closing section and contact information.
+
+These are possibilities, not mandatory sections. Include only those supported by my documents and consistent with the supplied theme.
+
+### Narrative requirements
+
+- Every section must have a clear purpose.
+- Each section should lead naturally into the next.
+- Use progressive storytelling rather than presenting every fact simultaneously.
+- Make projects and achievements understandable to both technical and nontechnical visitors.
+- Explain my contributions and the problems addressed whenever the source material supports it.
+- Use meaningful content hierarchy instead of overwhelming visitors with information.
+- Keep the writing authentic and specific to me.
+- Do not sacrifice clarity for visual spectacle.
+
+The visitor should leave with a clear understanding of who I am, what I build, how I think, and what I can contribute.
+
+---
+
+## 7. ANIMATION AND INTERACTION SPECIFICATION
+
+Every animation must have a purpose. Build a coherent motion language across the entire website.
+
+### A. Initial loading experience
+
+Create a short, elegant loading experience that fits the finalized visual theme.
+
+- Use typography, abstract visual elements, or a restrained progress indicator.
+- Do not create a separate logo or brand mark.
+- Avoid a fake loading percentage if actual loading progress is not measurable.
+- Never block the website behind an unnecessary artificial delay.
+- Prioritize loading the hero content and primary image.
+- Reveal the page as soon as its essential content is ready.
+- Keep the loading experience brief and responsive.
+- Ensure that a failed animation or JavaScript error cannot leave the site permanently covered by a loader.
+
+The page must remain accessible and usable if animations fail to initialize.
+
+### B. Hero sequence
+
+Create a carefully choreographed introduction that may combine:
+
+- Typography appearing in a deliberate sequence.
+- Line-by-line headline reveals.
+- A restrained photographic reveal.
+- Subtle background movement.
+- Small technical details or data-inspired visual elements.
+- A clear call to explore the portfolio.
+
+The animation must reveal content quickly and must not delay the first meaningful view.
+
+### C. Scroll storytelling
+
+Use GSAP ScrollTrigger for carefully designed scroll-driven experiences.
+
+Possible treatments include:
+
+- Text and image reveals.
+- Editorial transitions.
+- Controlled parallax.
+- Progressively revealed story fragments.
+- Pinned narrative sections where they improve comprehension.
+- Coordinated transitions between visual states.
+
+Use pinning sparingly. Avoid excessive scroll hijacking, nested scrolling, long periods where the visitor cannot reach the next section, and interactions that make mobile navigation difficult.
+
+### D. Text animations
+
+Use SplitType or a comparable solution for selected headings and introductory text.
+
+- Animate by line or word where appropriate.
+- Use staggered reveals sparingly.
+- Avoid constant blinking, typing effects, and random text scrambling.
+- Preserve text selection and screen-reader access.
+- Revert or clean up temporary DOM splitting correctly.
+- Prevent invisible text when JavaScript fails.
+
+### E. Micro-interactions
+
+Design consistent, responsive interactions for:
+
+- Navigation links.
+- Active navigation states.
+- Buttons and calls to action.
+- Project links.
+- Project previews.
+- Image interactions.
+- Expandable content.
+- Skill or technology details, if interactive.
+- Scroll progress indicators, if appropriate.
+- Copy-to-clipboard actions, if included.
+- Contact links and form feedback.
+
+Use subtle changes in position, opacity, scale, borders, underlines, or other theme-appropriate visual properties.
+
+Do not animate every element simply because it can be animated.
+
+### F. Navigation
+
+Create an intuitive navigation system appropriate to the chosen design.
+
+- Make section navigation predictable.
+- Indicate the active section when useful.
+- Support keyboard interaction.
+- Support mobile navigation.
+- Provide visible focus states.
+- Keep important navigation available without obscuring content.
+- Ensure anchor links work with smooth scrolling.
+
+### G. Motion accessibility
+
+Respect `prefers-reduced-motion`.
+
+When reduced motion is enabled:
+
+- Disable unnecessary parallax.
+- Replace elaborate transitions with simpler alternatives.
+- Avoid pinned storytelling sequences that impede access.
+- Reduce or remove nonessential continuous animation.
+- Preserve all content and functionality.
+
+Never make information available only through motion.
+
+---
+
+## 8. PERFORMANCE IS A FIRST-CLASS REQUIREMENT
+
+The site must look sophisticated without becoming unnecessarily heavy.
+
+Prioritize Core Web Vitals and perceived performance from the beginning, not as an afterthought.
+
+### Performance targets
+
+Aim for the following on representative production builds and mobile test conditions:
+
+- **Largest Contentful Paint (LCP):** 2.5 seconds or less.
+- **First Contentful Paint (FCP):** 1.8 seconds or less.
+- **Cumulative Layout Shift (CLS):** 0.1 or less.
+- **Interaction to Next Paint (INP):** 200 milliseconds or less.
+- Minimal unnecessary JavaScript.
+- Fast initial rendering.
+- Stable layouts and responsive image delivery.
+
+These are targets, not guarantees. Measure real results and identify environmental factors that affect them.
+
+### Optimization requirements
+
+1. Prefer Server Components for static and content-heavy sections.
+2. Avoid making the entire application a Client Component.
+3. Use dynamic imports for heavy, nonessential interactive features.
+4. Load Three.js, shader effects, and other WebGL dependencies only when necessary.
+5. Defer noncritical animation initialization until it is useful.
+6. Do not lazy-load the actual LCP image if it is the initial hero image.
+7. Use `priority` or the appropriate current Next.js image-priority mechanism only for the genuinely critical image.
+8. Optimize image dimensions, formats, and responsive source sizes.
+9. Reserve image and media dimensions to prevent layout shifts.
+10. Avoid loading multiple font families and unnecessary font weights.
+11. Subset fonts when practical and use efficient font-display settings.
+12. Avoid large client-side data dependencies.
+13. Minimize unnecessary React re-renders.
+14. Use `transform` and `opacity` for animation whenever possible.
+15. Avoid repeatedly animating layout-intensive properties.
+16. Avoid expensive filters, giant blur effects, and full-screen shader loops.
+17. Pause or reduce offscreen animation and rendering.
+18. Reduce rendering resolution and visual complexity on weaker devices.
+19. Respect browser visibility and device constraints.
+20. Avoid excessive observers, event listeners, and scroll callbacks.
+21. Clean up all animation contexts, timelines, listeners, and WebGL resources.
+22. Prevent layout shifts during fonts, photographs, loading screens, and page transitions.
+23. Avoid adding dependencies that duplicate existing functionality.
+24. Test the production build rather than relying exclusively on the development server.
+
+### WebGL fallback
+
+The website must remain attractive and functional without WebGL.
+
+Provide a lightweight CSS fallback and avoid making 3D rendering necessary for the primary visual experience.
+
+On low-powered devices, consider disabling nonessential 3D effects entirely.
+
+### Loading strategy
+
+The initial viewport should prioritize:
+
+1. Essential HTML and CSS.
+2. The main headline and introductory content.
+3. The critical photograph, if used in the hero.
+4. Essential fonts.
+5. Interactive functionality needed immediately.
+
+Load secondary animations and heavy visual effects after the critical experience is available.
+
+Do not preload every image, font, shader, or JavaScript bundle.
+
+### Performance verification
+
+Use Lighthouse, browser performance tools, and available build-analysis tools to identify bottlenecks.
+
+Where possible, inspect bundle sizes and document the impact of heavy dependencies.
+
+Do not claim that performance targets have been achieved unless they have actually been tested.
+
+---
+
+## 9. SEO, SEARCH ENGINES, AND AI/LLM DISCOVERABILITY
+
+The portfolio must be understandable to conventional search engines, AI search systems, language models, and other automated content discovery systems.
+
+### Technical SEO
+
+Implement:
+
+- Unique and descriptive page titles.
+- A meaningful meta description.
+- Canonical URL support when the production domain is known.
+- Open Graph metadata.
+- Social sharing metadata.
+- A suitable Twitter/X card configuration.
+- `robots.txt`.
+- `sitemap.xml`.
+- A clear URL structure.
+- Semantic headings in a logical hierarchy.
+- Descriptive links and image alt text.
+- Appropriate indexing directives.
+- A custom 404 page.
+- Clean internal navigation.
+- Appropriate metadata for individual project pages if such pages exist.
+
+Use Next.js Metadata APIs and file conventions wherever appropriate.
+
+Do not invent my production domain, public social accounts, or canonical URL. Use a clearly configurable site URL until the actual domain is available.
+
+### Structured data
+
+Add accurate JSON-LD structured data where appropriate, such as:
+
+- `Person`.
+- `WebSite`.
+- `ProfilePage`, if appropriate.
+- `CreativeWork` or relevant project-related types when supported by the actual content.
+
+Include only properties supported by verified information.
+
+Keep JSON-LD consistent with the visible website content. Do not invent qualifications, employers, awards, or professional affiliations.
+
+### AI and LLM discoverability
+
+Create a comprehensive but maintainable machine-readable representation of the website.
+
+Consider:
+
+- `llms.txt` at the site root as an optional discovery aid.
+- A concise, factual overview of my professional identity.
+- Clearly structured project summaries.
+- Accessible, crawlable HTML content.
+- Descriptive headings and internal links.
+- An optional machine-readable portfolio or project index if it adds real value.
+- Accurate metadata about projects, technologies, experience, and contact information.
+
+The `llms.txt` file should summarize the actual public content and point to useful pages. Do not treat it as a guaranteed ranking factor or assume all AI systems support it.
+
+Do not hide important information exclusively in images, shaders, canvas elements, or client-only interactions.
+
+### Robots and AI crawlers
+
+Configure crawler directives carefully.
+
+- Do not accidentally block legitimate search engines from public portfolio content.
+- Do not assume that allowing a crawler guarantees indexing or citation.
+- Do not create contradictory robots directives.
+- Treat training crawlers and search crawlers as different categories where relevant.
+- Do not promise visibility in every AI answer engine.
+
+### Content clarity
+
+AI systems should be able to determine:
+
+- Who Vishwa Rajput is.
+- That I work in AI engineering and data engineering.
+- Which technologies I use, based on verified information.
+- What my projects do.
+- What my actual contributions were.
+- What my experience and aspirations are.
+- Where visitors can find my verified professional profiles and contact details.
+
+Make the site machine-readable without sacrificing its visual design.
+
+---
+
+## 10. ACCESSIBILITY AND CROSS-BROWSER SUPPORT
+
+Build the website to work well across current versions of major browsers, including Chrome, Firefox, Safari, and Edge.
+
+Test responsive behavior on:
+
+- Desktop screens.
+- Laptops.
+- Tablets.
+- Small mobile screens.
+- Touch devices.
+- Keyboard-only navigation.
+
+Accessibility requirements:
+
+- Semantic HTML.
+- Logical heading structure.
+- Keyboard-accessible controls.
+- Visible focus states.
+- Adequate color contrast.
+- Meaningful image alt text.
+- Accessible navigation.
+- Reduced-motion support.
+- Appropriate ARIA only where necessary.
+- Correct focus management for overlays and mobile menus.
+- No dependence on hover alone.
+- No inaccessible custom cursor behavior.
+- No essential text embedded only in imagery.
+
+Use progressive enhancement so that the content remains understandable even when JavaScript, WebGL, or nonessential animation features are unavailable.
+
+Do not use custom cursors on touch devices. If a custom cursor is included on desktop, it must remain subtle and must never replace native interaction feedback.
+
+---
+
+## 11. CODE QUALITY AND PROJECT ARCHITECTURE
+
+Create a clean, maintainable project structure.
+
+Separate responsibilities into reusable components and utilities, such as:
+
+- Layout and metadata.
+- Navigation.
+- Introductory section.
+- Storytelling sections.
+- Project presentation.
+- Photography and image treatments.
+- Footer and contact elements.
+- Animation utilities.
+- Scroll orchestration.
+- WebGL components.
+- SEO and structured data utilities.
+- Shared SCSS variables, mixins, and design tokens.
+
+Use the actual content extracted from my documents.
+
+Avoid:
+
+- A single enormous page component.
+- Duplicated animation code.
+- Unnecessary global state.
+- Overuse of `useEffect`.
+- Excessive client-side rendering.
+- Unnecessary context providers.
+- Uncontrolled DOM manipulation.
+- Unsafe HTML injection.
+- Unnecessary third-party trackers.
+- Dead code and unused dependencies.
+- Placeholder buttons that do nothing.
+- Fake project links.
+- Broken image references.
+- Suppressed TypeScript errors.
+- Arbitrary timeouts used to conceal loading or animation problems.
+
+Use strict TypeScript where practical.
+
+Create reusable SCSS tokens for colors, typography, spacing, layout widths, breakpoints, borders, and animation conventions.
+
+Ensure animations initialize and clean up correctly during React mounting, unmounting, route changes, and development Strict Mode.
+
+---
+
+## 12. TESTING AND QUALITY ASSURANCE
+
+Before considering the website complete:
+
+- Install dependencies using the existing package manager and lockfile.
+- Verify that dependency versions are compatible.
+- Run linting and TypeScript checks where configured.
+- Run the production build.
+- Resolve build errors and relevant warnings.
+- Test the main navigation and every interactive element.
+- Verify all images and local assets.
+- Check mobile layouts and responsive breakpoints.
+- Test reduced-motion behavior.
+- Check that content remains visible if animations fail.
+- Test smooth scrolling and ScrollTrigger synchronization.
+- Confirm that no duplicate scroll systems are running.
+- Verify metadata and structured data.
+- Verify `robots.txt`, sitemap generation, and `llms.txt` where implemented.
+- Check for horizontal overflow and major layout shifts.
+- Run Lighthouse or equivalent performance checks when the environment permits.
+- Document any tests that could not be run.
+
+If browser automation or visual testing tools are available, use them to inspect the actual rendered experience.
+
+Do not report a successful test unless it has been executed and its result is known.
+
+---
+
+## 13. IMPLEMENTATION WORKFLOW
+
+Follow this workflow.
+
+### Phase 1: Discovery
+
+Inspect the project, read the source documents, identify assets, and understand the existing codebase.
+
+Determine which information is factual, which theme decisions are already finalized, and which assets should be used.
+
+### Phase 2: Architecture
+
+Design the page structure, content model, responsive layout, animation ownership, and performance strategy.
+
+Choose the smallest set of libraries that can deliver the intended experience reliably.
+
+### Phase 3: Build
+
+Implement the actual Next.js application, SCSS styles, reusable components, narrative sections, photography, metadata, and coordinated animations.
+
+Prioritize the real visual result rather than merely creating a technically complete skeleton.
+
+### Phase 4: Refine
+
+Inspect the rendered site and improve typography, spacing, imagery, animation timing, section transitions, and responsiveness.
+
+Remove effects that feel excessive, distracting, generic, or unnecessarily expensive.
+
+### Phase 5: Optimize
+
+Measure performance, inspect the critical rendering path, reduce unnecessary JavaScript, and optimize image and font delivery.
+
+### Phase 6: Verify
+
+Run the available checks, resolve issues, and confirm that the final experience works across the intended devices and browsers.
+
+### Phase 7: Report
+
+Provide a concise completion report that includes:
+
+- What was built.
+- The implemented section structure.
+- Important design and animation decisions.
+- Dependencies added and why.
+- Performance and SEO improvements.
+- Tests actually executed and their outcomes.
+- Any remaining limitations.
+- How to run the project locally.
+
+Do not stop after writing a plan. Proceed with implementation using the tools available in the current environment.
+
+---
+
+## 14. FINAL CREATIVE STANDARD
+
+The final portfolio should feel like a carefully directed, technically sophisticated personal experience.
+
+It must not resemble a generic AI-generated portfolio template.
+
+It should demonstrate attention to detail through typography, composition, photography, transitions, interaction design, and engineering quality.
+
+The visual experience should be impressive without being excessive. The animations should feel intentional rather than decorative. The content should communicate genuine capability rather than exaggerated claims.
+
+My personal photographs should be presented thoughtfully and professionally. My story should feel authentic. My AI engineering and data engineering identity should be immediately understandable.
+
+**Final priorities, in order:**
+
+1. Follow my supplied documents, finalized theme, and narrative.
+2. Build an authentic and compelling personal story.
+3. Deliver a distinctive, polished visual experience.
+4. Implement a coherent and maintainable animation system.
+5. Preserve excellent loading performance and responsiveness.
+6. Make the site accessible, SEO-friendly, and AI-discoverable.
+7. Verify the implementation and document the actual results.
+
+Start by inspecting the available files and existing project. Then build the complete portfolio.
+
+Do not create a logo. Do not fabricate information. Do not compromise performance for animation. Do not substitute a generic template for the finalized creative direction.
+
+The goal is to create a portfolio that makes visitors remember **Vishwa Rajput as an intelligent, capable AI Engineer and Data Engineer with a distinctive professional story.**
+
+And Personally I like this Website as an Inspirational Portfolio website
+https://heynesh.com/
+
+My professional links:
+
+LinkedIn: https://www.linkedin.com/in/vishwa-rajput
+GitHub: https://github.com/VishwaRajput
+Instagram: https://www.instagram.com/__vishwa__23__/
+
+I will provide additional personal information, photographs, screenshots, videos, project assets, and other materials.
+
+Treat my actual information as the source of truth.
+
+Never fabricate:
+
+Education, degrees, employment, internships, or job titles.
+
+Dates, achievements, metrics, project results, or professional experience.
+
+Technologies that I have not actually used.
+
+Testimonials, awards, client names, or endorsements.
+
+Personal motivations, life events, or biographical details that I have not shared.
+
+If a required fact is missing, leave a clearly identified placeholder or ask me for it. Do not turn assumptions into autobiographical statements.
+
+My photographs must remain recognizable as me. Do not substitute a generated AI face for my actual portrait. Do not portray generated imagery as real project evidence.

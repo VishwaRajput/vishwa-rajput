@@ -1,0 +1,191 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.capabilitiesSection {
+  padding: $spacing-24 0;
+  position: relative;
+  z-index: $z-content;
+  border-top: 1px solid $color-border;
+  background: $color-bg;
+}
+
+.container {
+  @include container;
+}
+
+.sectionHeader {
+  margin-bottom: $spacing-16;
+
+  .badge {
+    @include meta-tag;
+    color: $color-accent;
+    background: $color-accent-subtle;
+    border: 1px solid $color-border-accent;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+    margin-bottom: 1.25rem;
+  }
+
+  .title {
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+    font-weight: 500;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: $color-text-primary;
+    margin-bottom: 1.25rem;
+
+    .accentText {
+      color: $color-accent;
+    }
+  }
+
+  .subtitle {
+    font-size: $text-lg;
+    color: $color-text-secondary;
+    max-width: 650px;
+    line-height: 1.6;
+  }
+}
+
+.matrixGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+
+  @include respond-to('md') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to('xl') {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.capabilityCard {
+  @include glass-panel;
+  padding: 1.85rem;
+  display: flex;
+  flex-direction: column;
+
+  .cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid $color-border;
+    margin-bottom: 1.25rem;
+
+    .iconCircle {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid $color-border-accent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-accent;
+    }
+
+    .iconCircleEmerald {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-accent-emerald;
+    }
+
+    .categoryName {
+      font-size: $text-base;
+      font-weight: 500;
+      color: $color-text-primary;
+      letter-spacing: -0.01em;
+    }
+  }
+}
+
+.skillsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.skillRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.65rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all $duration-fast ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: $color-border;
+  }
+
+  .skillName {
+    font-size: $text-sm;
+    color: $color-text-primary;
+  }
+
+  .skillLevel {
+    font-family: $font-mono;
+    font-size: 0.6875rem;
+    color: $color-text-muted;
+  }
+}
+
+.languagesCard {
+  background: rgba(14, 18, 24, 0.8);
+}
+
+.languagesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+
+  .langItem {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    padding: 0.875rem 0.75rem;
+
+    .langName {
+      font-size: $text-sm;
+      font-weight: 500;
+      color: $color-text-primary;
+    }
+
+    .langProficiency {
+      font-family: $font-mono;
+      font-size: $text-xs;
+      color: $color-accent-emerald;
+      margin-top: 0.25rem;
+    }
+  }
+}
+
+.mobilityFooter {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 1px solid $color-border;
+
+  .mobilityLabel {
+    @include meta-tag;
+    color: $color-text-muted;
+    margin-bottom: 0.35rem;
+  }
+
+  .mobilityText {
+    font-size: $text-xs;
+    color: $color-text-secondary;
+    line-height: 1.4;
+  }
+}

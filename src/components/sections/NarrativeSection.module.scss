@@ -1,0 +1,170 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.narrativeSection {
+  padding: $spacing-24 0;
+  position: relative;
+  z-index: $z-content;
+  border-top: 1px solid $color-border;
+  background: $color-bg;
+}
+
+.container {
+  @include container;
+}
+
+.sectionHeader {
+  margin-bottom: $spacing-16;
+
+  .badge {
+    @include meta-tag;
+    color: $color-accent;
+    background: $color-accent-subtle;
+    border: 1px solid $color-border-accent;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+    margin-bottom: 1.25rem;
+  }
+
+  .title {
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+    font-weight: 500;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: $color-text-primary;
+    margin-bottom: 1.25rem;
+
+    .accentText {
+      color: $color-accent;
+    }
+  }
+
+  .subtitle {
+    font-size: $text-lg;
+    color: $color-text-secondary;
+    max-width: 650px;
+    line-height: 1.6;
+  }
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+
+  @include respond-to('lg') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pillarCard {
+  @include glass-panel;
+  padding: 2.25rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  .pillarHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+    .pillarMeta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+
+      .pillarPhase {
+        @include meta-tag;
+        color: $color-accent;
+      }
+
+      .pillarLocation {
+        font-family: $font-mono;
+        font-size: $text-xs;
+        color: $color-text-muted;
+      }
+    }
+
+    .pillarIconCircle {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid $color-border-accent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-accent;
+    }
+  }
+
+  .pillarTitle {
+    font-size: $text-xl;
+    font-weight: 500;
+    color: $color-text-primary;
+    margin-bottom: 1rem;
+    letter-spacing: -0.015em;
+  }
+
+  .pillarText {
+    font-size: $text-sm;
+    color: $color-text-secondary;
+    line-height: 1.65;
+    position: relative;
+    z-index: 2;
+  }
+
+  .pillarStepNum {
+    position: absolute;
+    bottom: -15px;
+    right: 10px;
+    font-family: $font-mono;
+    font-size: 5rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.02);
+    line-height: 1;
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+.philosophyBlock {
+  position: relative;
+  background: rgba(14, 18, 24, 0.6);
+  border: 1px solid $color-border;
+  border-radius: 16px;
+  padding: 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+
+  .quoteAccent {
+    position: absolute;
+    top: 0;
+    left: 2.5rem;
+    width: 60px;
+    height: 3px;
+    background: $color-accent;
+    border-radius: 2px;
+  }
+
+  .quoteText {
+    font-size: clamp(1.15rem, 2vw, 1.35rem);
+    font-weight: 400;
+    line-height: 1.6;
+    color: $color-text-primary;
+    font-style: italic;
+    margin-bottom: 1.25rem;
+  }
+
+  .quoteAuthor {
+    font-family: $font-mono;
+    font-size: $text-xs;
+    color: $color-accent;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+}
